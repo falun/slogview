@@ -15,7 +15,7 @@
 //
 //	// construct a slogview handler that forwards to the original
 //	svHandler := slogview.New(slogview.Options{Next: originalHandler})
-//	// replace th edefault *slog.Logger with the now-wrapped version
+//	// replace the default *slog.Logger with the now-wrapped version
 //	slog.SetDefault(slog.New(svHandler))
 //
 //	// Wire up the handler to a webserver for debugging
