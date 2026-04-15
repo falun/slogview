@@ -6,7 +6,7 @@
 //
 // The handler wraps an inner slog.JSONHandler for formatting and can
 // optionally forward records to a downstream handler. It's relatively
-// trivial to add into your logging stack in mast cases:
+// trivial to add into your logging stack in most cases:
 //
 // ```go
 //
