@@ -12,7 +12,6 @@ import (
 	"github.com/falun/slogview/stream"
 )
 
-// DefaultRetention is used when Options.Retention is the zero value.
 var DefaultRetention = buffer.Retention{
 	IdleWindow: 30 * time.Second,
 	MaxRecords: 0,
@@ -22,9 +21,8 @@ var DefaultRetention = buffer.Retention{
 // Options configures a new Handler.
 type Options struct {
 	// Level is the runtime-mutable level gate for records captured into the
-	// buffer. Nil means a new LevelVar defaulted to Info. Callers wanting to
-	// change the level at runtime should pass their own LevelVar (or call
-	// Handler.SetLevel).
+	// buffer. Nil means a new LevelVar defaulted to Debug. This may be
+	// changed at runtime via Handler.SetLevel.
 	Level *slog.LevelVar
 
 	// Retention controls buffer eviction. Zero value uses DefaultRetention.
